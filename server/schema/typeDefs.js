@@ -26,11 +26,17 @@ const typeDefs = gql`
     username: String
   }
 
+// Queries 
   type Query {
     users: [User]
     user(username: String!): User
     thoughts(username: String): [Thought]
     thought(_id: ID!): Thought
+  }
+
+// Mutations
+  type Mutation {
+    login(username: String!, email: String!, password:String!) User
   }
 `;
 
